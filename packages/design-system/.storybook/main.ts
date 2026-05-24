@@ -1,14 +1,9 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(ts|tsx)",
-    "../src/**/*.stories.@(ts|tsx)",
   ],
   addons: [
     "@storybook/addon-essentials",
@@ -21,18 +16,6 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
-  },
-  viteFinal: (config) => {
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve?.alias,
-          "@bk/design-system": resolve(__dirname, "../src/index.ts"),
-        },
-      },
-    };
   },
 };
 

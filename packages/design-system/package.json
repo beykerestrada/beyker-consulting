@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "description": "Beyker Consulting design system — Workshop palette",
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
     },
     "./styles": "./dist/styles/variables.css",
     "./styles/*": "./dist/styles/*"
