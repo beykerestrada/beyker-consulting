@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm -F @bk/design-system build-storybook",
+  "outputDirectory": "packages/design-system/storybook-static",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
+}

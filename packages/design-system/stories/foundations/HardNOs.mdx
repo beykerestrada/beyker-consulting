@@ -1,0 +1,62 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Hard NOs" />
+
+# Hard NOs
+
+These are the AI-default design tells we are explicitly killing.
+Any pull request that introduces any of the following is rejected.
+
+---
+
+### 1. No AI purple, violet, or deep indigo
+
+No `#0F0F2D`, no `#6366F1`, no synthwave palette anywhere.
+
+### 2. No purple-to-pink or blue-to-purple gradients
+
+Gradients are reserved for `gradient.page.foot` — one vertical, single-hue, low-contrast fade.
+No diagonal gradients. No multi-hue gradients.
+
+### 3. No electric blue or hot pink accents
+
+No `#3B82F6` ("Lovable blue"). No `#E61363` ("Lovable/Vercel pink"). No "default SaaS" accents.
+
+### 4. No generic AI off-whites as canvas
+
+Not `#FCFBF8`, not `#F4F3EE`, not `#F7F4ED`. Canvas is `#EBE7DC`. Use it exactly.
+
+### 5. No Inter, no Geist
+
+Typography is Söhne/General Sans + Berkeley Mono/Commit Mono. No Google Fonts CDN.
+Self-host only.
+
+### 6. No glassmorphism
+
+Surfaces are solid. Borders do the work. The **one exception**: the sticky `<TopNav>` on scroll
+uses `backdrop-filter` with `opacity ≥ 0.85`. That is the only place in the entire system.
+
+### 7. No pure black or violet-black
+
+`color.ink.primary` is `#1F1B16` — warm brown-black. Dark mode (v2+) will use a warm-neutral
+palette, never violet-tinted.
+
+### 8. No cookie-cutter SaaS hero layout
+
+No: centered headline + three-column feature grid + giant pricing table.
+Use `<Specsheet>`, `<Manifesto>`, `<WorkLog>`, and asymmetric `<Grid>` compositions.
+
+### 9. No ink/terracotta/amber/charcoal as dominant palette
+
+Those are the "operator-warm" clichés. This system uses Workshop (§4 of the brief).
+
+### 10. No emoji as decorative bullets
+
+Emoji is allowed in copy. Never as iconography, never as `<Eyebrow>` decoration.
+Use Lucide icons via `<Icon>` at 1.5px stroke only.
+
+---
+
+## Self-audit status
+
+See `STYLE_GUIDE.md` §9 for the full audited checklist with one-line notes on how the system avoids each item.

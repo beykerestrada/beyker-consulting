@@ -1,0 +1,140 @@
+/* ============================================================
+   BASE STYLES — Beyker Consulting Design System
+   Import after variables.css. Contains reset, @font-face,
+   and base typography only. No component styles here.
+   ============================================================ */
+
+/* @font-face declarations — self-hosted woff2 in /public/fonts/
+   Drop font files at:
+     - /public/fonts/sohne-{weight}.woff2       (paid, Klim)
+     - /public/fonts/general-sans-{weight}.woff2 (free, Fontshare)
+     - /public/fonts/berkeley-mono.woff2         (paid, U.S. Graphics)
+     - /public/fonts/commit-mono.woff2           (free)
+
+   Current setup uses General Sans + Commit Mono as active fallbacks.
+   Swap src() order when paid fonts are licensed.
+*/
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("/fonts/CommitMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Minimal reset ────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bk-color-surface-canvas);
+  color: var(--bk-color-ink-primary);
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-body-md);
+  line-height: var(--bk-type-leading-body-md);
+  font-weight: var(--bk-type-weight-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Never pure black text — always use ink tokens */
+a {
+  color: var(--bk-color-signal-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--bk-motion-duration-fast) var(--bk-motion-ease-standard);
+}
+
+a:hover {
+  text-decoration-color: var(--bk-color-signal-primary);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--bk-color-signal-primary);
+  outline-offset: 3px;
+  border-radius: var(--bk-radius-sm);
+}
+
+mark {
+  background-color: var(--bk-color-highlight-mark);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--bk-type-family-mono);
+  font-size: var(--bk-type-size-mono-md);
+  line-height: var(--bk-type-leading-mono-md);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ─── Focus ring — consistent across all interactive elements ─ */
+
+:focus-visible {
+  outline: 2px solid var(--bk-color-signal-primary);
+  outline-offset: 2px;
+  border-radius: var(--bk-radius-sm);
+}
+
+/* Skip :focus for non-keyboard interactions */
+:focus:not(:focus-visible) {
+  outline: none;
+}

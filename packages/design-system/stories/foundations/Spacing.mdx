@@ -1,0 +1,60 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing, Radii, Shadows
+
+## Spacing scale (4-based)
+
+Default vertical rhythm between content blocks is `space.7` (48px). Layout breathes.
+
+<div style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "32px", backgroundColor: "#EBE7DC" }}>
+  {[
+    { name: "space.1", value: "4px", px: 4 },
+    { name: "space.2", value: "8px", px: 8 },
+    { name: "space.3", value: "12px", px: 12 },
+    { name: "space.4", value: "16px", px: 16 },
+    { name: "space.5", value: "24px", px: 24 },
+    { name: "space.6", value: "32px", px: 32 },
+    { name: "space.7", value: "48px — section rhythm", px: 48 },
+    { name: "space.8", value: "64px", px: 64 },
+    { name: "space.9", value: "96px", px: 96 },
+    { name: "space.10", value: "128px", px: 128 },
+  ].map(({ name, value, px }) => (
+    <div key={name} style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+      <div style={{ width: "120px", fontFamily: "monospace", fontSize: "12px", color: "#5C5448", flexShrink: 0 }}>{name}</div>
+      <div style={{ height: "20px", width: px, backgroundColor: "#3A5A40", borderRadius: "2px", flexShrink: 0 }} />
+      <div style={{ fontFamily: "monospace", fontSize: "11px", color: "#8A8073" }}>{value}</div>
+    </div>
+  ))}
+</div>
+
+## Radii
+
+No radii larger than 12px on surfaces. The look is paper, not balloons. `pill` is reserved for tags and badges only.
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `radius.none` | 0px | Sharp corners |
+| `radius.sm` | 4px | Subtle — inputs, small elements |
+| `radius.md` | 8px | Default — cards, buttons |
+| `radius.lg` | 12px | Maximum surface rounding |
+| `radius.pill` | 999px | Tags, badges **only** |
+
+## Shadows
+
+Minimal. Borders do the work, not shadows. A card looks like a card because of its edge, not its halo.
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `shadow.none` | none | Default for cards |
+| `shadow.sm` | `0 1px 2px rgba(31,27,22,0.06)` | Subtle float |
+| `shadow.md` | `0 2px 8px rgba(31,27,22,0.08)` | Dropdowns, toasts |
+
+No `shadow.lg`. No glow effects. No colored shadows.
+
+## Borders
+
+Default border: `1px solid color.border.default` (`#C7C0AE`).
+
+Hairline emphasis is preferred over shadow. Use borders to define edges, whitespace to create hierarchy.

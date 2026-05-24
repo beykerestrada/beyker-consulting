@@ -1,0 +1,158 @@
+/* AUTO-GENERATED — do not edit. Run `pnpm tokens:build` to regenerate. */
+/* Source: src/tokens/tokens.json (DTCG format)                          */
+
+:root {
+  /* Page background. Drafting paper. Warm, slightly gray, never cream. */
+  --bk-color-surface-canvas: #EBE7DC;
+  /* Cards, panels, raised surfaces. Vellum. */
+  --bk-color-surface-raised: #F4F1E8;
+  /* Inset areas, code blocks, quiet zones. Linen. */
+  --bk-color-surface-sunken: #DDD8C9;
+  /* Primary text. Soot — warm brown-black, not charcoal, not pure black. */
+  --bk-color-ink-primary: #1F1B16;
+  /* Secondary text, metadata. Driftwood. */
+  --bk-color-ink-secondary: #5C5448;
+  /* Tertiary, placeholders, captions. Stone. */
+  --bk-color-ink-muted: #8A8073;
+  /* Hairlines, dividers, card borders. Twine. */
+  --bk-color-border-default: #C7C0AE;
+  /* Emphasized borders, focused inputs. */
+  --bk-color-border-strong: #9A8F78;
+  /* Primary action, links, brand mark. Workshop green. Single accent — use sparingly. */
+  --bk-color-signal-primary: #3A5A40;
+  /* Hover state for primary. */
+  --bk-color-signal-primary-hover: #2F4A35;
+  /* Tinted background for primary-themed surfaces. */
+  --bk-color-signal-primary-subtle: #E2E6D9;
+  /* Inline text highlighter (<mark>). Lichen. Use sparingly for editorial emphasis. */
+  --bk-color-highlight-mark: #C8CC8A;
+  /* Reuses signal primary. No separate green needed. */
+  --bk-color-status-success: #3A5A40;
+  /* Earth-toned warning, not amber, not yellow. */
+  --bk-color-status-warning: #8B6B2E;
+  /* Earth-toned error, not red-red, not terracotta-bright. */
+  --bk-color-status-danger: #7A3B2E;
+  /* No space. */
+  --bk-space-0: 0px;
+  /* Micro spacing. */
+  --bk-space-1: 4px;
+  /* Compact spacing. */
+  --bk-space-2: 8px;
+  /* Tight spacing. */
+  --bk-space-3: 12px;
+  /* Base spacing unit. */
+  --bk-space-4: 16px;
+  /* Comfortable spacing. */
+  --bk-space-5: 24px;
+  /* Generous spacing. */
+  --bk-space-6: 32px;
+  /* Section rhythm — default vertical gap between content blocks. */
+  --bk-space-7: 48px;
+  /* Large section gap. */
+  --bk-space-8: 64px;
+  /* Extra-large section gap. */
+  --bk-space-9: 96px;
+  /* Maximum section gap. */
+  --bk-space-10: 128px;
+  /* No rounding. */
+  --bk-radius-none: 0px;
+  /* Subtle rounding. */
+  --bk-radius-sm: 4px;
+  /* Default component rounding. */
+  --bk-radius-md: 8px;
+  /* Maximum surface rounding. No values larger than this on surfaces. */
+  --bk-radius-lg: 12px;
+  /* Used only on tags/badges. Never on cards or surfaces. */
+  --bk-radius-pill: 999px;
+  /* No shadow. Default for cards — borders do the work. */
+  --bk-shadow-none: none;
+  /* Subtle elevation. */
+  --bk-shadow-sm: 0 1px 2px rgba(31, 27, 22, 0.06);
+  /* Moderate elevation. No shadow.lg — no glow effects, no colored shadows. */
+  --bk-shadow-md: 0 2px 8px rgba(31, 27, 22, 0.08);
+  /* Quick interactions, hover color changes. */
+  --bk-motion-duration-fast: 120ms;
+  /* Default transitions. */
+  --bk-motion-duration-base: 200ms;
+  /* Complex transitions, overlays. */
+  --bk-motion-duration-slow: 320ms;
+  /* Page hero only. */
+  --bk-type-size-display-xl: clamp(3.5rem, 5vw, 5rem);
+  /* Section openers. */
+  --bk-type-size-display-lg: 3.5rem;
+  /* H1 inside content. */
+  --bk-type-size-heading-xl: 2.25rem;
+  /* H2. */
+  --bk-type-size-heading-lg: 1.75rem;
+  /* H3. */
+  --bk-type-size-heading-md: 1.375rem;
+  /* H4 / card titles. */
+  --bk-type-size-heading-sm: 1.125rem;
+  /* Lede paragraphs. */
+  --bk-type-size-body-lg: 1.125rem;
+  /* Default body. */
+  --bk-type-size-body-md: 1rem;
+  /* Secondary text. */
+  --bk-type-size-body-sm: 0.875rem;
+  /* Code, technical labels, eyebrow metadata. */
+  --bk-type-size-mono-md: 0.9375rem;
+  /* Tags, badges, captions. */
+  --bk-type-size-mono-sm: 0.8125rem;
+  /* Line height for display-xl. */
+  --bk-type-leading-display-xl: 1.02;
+  /* Line height for display-lg. */
+  --bk-type-leading-display-lg: 1.05;
+  /* Line height for heading-xl. */
+  --bk-type-leading-heading-xl: 1.15;
+  /* Line height for heading-lg. */
+  --bk-type-leading-heading-lg: 1.2;
+  /* Line height for heading-md. */
+  --bk-type-leading-heading-md: 1.3;
+  /* Line height for heading-sm. */
+  --bk-type-leading-heading-sm: 1.35;
+  /* Line height for body-lg. */
+  --bk-type-leading-body-lg: 1.55;
+  /* Line height for body-md. */
+  --bk-type-leading-body-md: 1.55;
+  /* Line height for body-sm. */
+  --bk-type-leading-body-sm: 1.5;
+  /* Line height for mono-md. */
+  --bk-type-leading-mono-md: 1.5;
+  /* Line height for mono-sm. */
+  --bk-type-leading-mono-sm: 1.45;
+  /* Default body weight. */
+  --bk-type-weight-regular: 400;
+  /* Display, heading, and emphasis weight. Never 700+ in this system. */
+  --bk-type-weight-medium: 500;
+  /* Letter-spacing for display sizes. */
+  --bk-type-tracking-display: -0.01em;
+  /* Letter-spacing for body text. */
+  --bk-type-tracking-body: 0em;
+  /* Letter-spacing for uppercase mono labels (tags, badges, eyebrows). */
+  --bk-type-tracking-mono-label: 0.04em;
+  /* Maximum width for prose/reading content. */
+  --bk-layout-prose-max: 72ch;
+  /* Maximum width for page compositions. */
+  --bk-layout-composition-max: 1120px;
+}
+
+/* Gradient — vertical canvas→sunken. Foot of full-page sections ONLY. */
+/* No diagonal gradients. No multi-hue gradients. */
+:root {
+  --bk-gradient-page-foot: linear-gradient(to bottom, #EBE7DC, #DDD8C9);
+}
+
+/* Motion easing */
+:root {
+  --bk-motion-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --bk-motion-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Font families — self-hosted woff2 via @font-face in /public/fonts/ */
+/* Söhne (paid) → General Sans (free fallback, Fontshare)             */
+/* Berkeley Mono (paid) → Commit Mono (free fallback)                 */
+/* NEVER Inter. NEVER Geist. NEVER Google Fonts CDN.                  */
+:root {
+  --bk-type-family-sans: 'Söhne', 'General Sans', system-ui, sans-serif;
+  --bk-type-family-mono: 'Berkeley Mono', 'Commit Mono', ui-monospace, monospace;
+}

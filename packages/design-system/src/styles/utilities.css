@@ -1,0 +1,191 @@
+/* ============================================================
+   UTILITY CLASSES — Beyker Consulting Design System
+   Token-bound utility classes. Framework-portable.
+   All values reference CSS variables — no raw values here.
+   ============================================================ */
+
+/* ─── Typography utilities ──────────────────────────────────── */
+
+.bk-display-xl {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-display-xl);
+  line-height: var(--bk-type-leading-display-xl);
+  font-weight: var(--bk-type-weight-medium);
+  letter-spacing: var(--bk-type-tracking-display);
+}
+
+.bk-display-lg {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-display-lg);
+  line-height: var(--bk-type-leading-display-lg);
+  font-weight: var(--bk-type-weight-medium);
+  letter-spacing: var(--bk-type-tracking-display);
+}
+
+.bk-heading-xl {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-heading-xl);
+  line-height: var(--bk-type-leading-heading-xl);
+  font-weight: var(--bk-type-weight-medium);
+  letter-spacing: var(--bk-type-tracking-display);
+}
+
+.bk-heading-lg {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-heading-lg);
+  line-height: var(--bk-type-leading-heading-lg);
+  font-weight: var(--bk-type-weight-medium);
+  letter-spacing: var(--bk-type-tracking-display);
+}
+
+.bk-heading-md {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-heading-md);
+  line-height: var(--bk-type-leading-heading-md);
+  font-weight: var(--bk-type-weight-medium);
+}
+
+.bk-heading-sm {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-heading-sm);
+  line-height: var(--bk-type-leading-heading-sm);
+  font-weight: var(--bk-type-weight-medium);
+}
+
+.bk-body-lg {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-body-lg);
+  line-height: var(--bk-type-leading-body-lg);
+  font-weight: var(--bk-type-weight-regular);
+}
+
+.bk-body-md {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-body-md);
+  line-height: var(--bk-type-leading-body-md);
+  font-weight: var(--bk-type-weight-regular);
+}
+
+.bk-body-sm {
+  font-family: var(--bk-type-family-sans);
+  font-size: var(--bk-type-size-body-sm);
+  line-height: var(--bk-type-leading-body-sm);
+  font-weight: var(--bk-type-weight-regular);
+}
+
+.bk-mono-md {
+  font-family: var(--bk-type-family-mono);
+  font-size: var(--bk-type-size-mono-md);
+  line-height: var(--bk-type-leading-mono-md);
+  font-weight: var(--bk-type-weight-regular);
+}
+
+.bk-mono-sm {
+  font-family: var(--bk-type-family-mono);
+  font-size: var(--bk-type-size-mono-sm);
+  line-height: var(--bk-type-leading-mono-sm);
+  font-weight: var(--bk-type-weight-regular);
+}
+
+.bk-mono-label {
+  font-family: var(--bk-type-family-mono);
+  font-size: var(--bk-type-size-mono-sm);
+  line-height: var(--bk-type-leading-mono-sm);
+  font-weight: var(--bk-type-weight-regular);
+  letter-spacing: var(--bk-type-tracking-mono-label);
+  text-transform: uppercase;
+}
+
+/* ─── Color utilities ──────────────────────────────────────── */
+
+.bk-text-primary {
+  color: var(--bk-color-ink-primary);
+}
+.bk-text-secondary {
+  color: var(--bk-color-ink-secondary);
+}
+.bk-text-muted {
+  color: var(--bk-color-ink-muted);
+}
+.bk-text-signal {
+  color: var(--bk-color-signal-primary);
+}
+
+.bk-bg-canvas {
+  background-color: var(--bk-color-surface-canvas);
+}
+.bk-bg-raised {
+  background-color: var(--bk-color-surface-raised);
+}
+.bk-bg-sunken {
+  background-color: var(--bk-color-surface-sunken);
+}
+
+/* ─── Border utilities ──────────────────────────────────────── */
+
+.bk-border {
+  border: 1px solid var(--bk-color-border-default);
+}
+.bk-border-strong {
+  border: 1px solid var(--bk-color-border-strong);
+}
+.bk-border-top {
+  border-top: 1px solid var(--bk-color-border-default);
+}
+.bk-border-bottom {
+  border-bottom: 1px solid var(--bk-color-border-default);
+}
+
+/* ─── Radius utilities ──────────────────────────────────────── */
+
+.bk-rounded-none {
+  border-radius: var(--bk-radius-none);
+}
+.bk-rounded-sm {
+  border-radius: var(--bk-radius-sm);
+}
+.bk-rounded-md {
+  border-radius: var(--bk-radius-md);
+}
+.bk-rounded-lg {
+  border-radius: var(--bk-radius-lg);
+}
+.bk-rounded-pill {
+  border-radius: var(--bk-radius-pill);
+}
+
+/* ─── Layout utilities ──────────────────────────────────────── */
+
+.bk-prose-max {
+  max-width: var(--bk-layout-prose-max);
+}
+.bk-container {
+  max-width: var(--bk-layout-composition-max);
+  margin-inline: auto;
+}
+.bk-container-px {
+  padding-inline: var(--bk-space-6);
+}
+
+/* ─── Spacing utilities (margin / padding) ──────────────────── */
+
+.bk-mt-7 {
+  margin-top: var(--bk-space-7);
+}
+.bk-mb-7 {
+  margin-bottom: var(--bk-space-7);
+}
+
+/* ─── Visually hidden (accessible) ────────────────────────── */
+
+.bk-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

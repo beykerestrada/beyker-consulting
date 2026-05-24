@@ -1,0 +1,73 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Typography is the primary brand signal. The pairing is deliberate:
+**Söhne** (or General Sans) for authority and readability;
+**Berkeley Mono** (or Commit Mono) for technical credibility and wayfinding.
+
+Never Inter. Never Geist. Never Google Fonts CDN — self-host only.
+
+## Font pairing
+
+| Role | Preferred (paid) | Fallback (free) | Never |
+|------|-----------------|-----------------|-------|
+| Sans (primary) | **Söhne** — Klim Type | **General Sans** — Fontshare | Inter, Geist |
+| Mono (accent) | **Berkeley Mono** — U.S. Graphics | **Commit Mono** | JetBrains Mono |
+
+Fonts are self-hosted as `woff2` from `/public/fonts/`. See `src/styles/base.css` for `@font-face` declarations.
+
+## Type scale
+
+<div style={{ display: "flex", flexDirection: "column", gap: "24px", padding: "32px", backgroundColor: "#EBE7DC" }}>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>display.xl — 5rem / lh 1.02 / tracking -0.01em</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "clamp(3.5rem, 5vw, 5rem)", lineHeight: 1.02, fontWeight: 500, letterSpacing: "-0.01em", color: "#1F1B16" }}>Workshop</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>display.lg — 3.5rem / lh 1.05</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "3.5rem", lineHeight: 1.05, fontWeight: 500, letterSpacing: "-0.01em", color: "#1F1B16" }}>Build systems that work.</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>heading.xl — 2.25rem / lh 1.15</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "2.25rem", lineHeight: 1.15, fontWeight: 500, color: "#1F1B16" }}>Notion Architecture</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>heading.lg — 1.75rem / lh 1.2</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "1.75rem", lineHeight: 1.2, fontWeight: 500, color: "#1F1B16" }}>Setup Sessions</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>heading.md — 1.375rem / lh 1.3</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "1.375rem", lineHeight: 1.3, fontWeight: 500, color: "#1F1B16" }}>What operators actually need</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>heading.sm — 1.125rem / lh 1.35</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "1.125rem", lineHeight: 1.35, fontWeight: 500, color: "#1F1B16" }}>Phase 1: Diagnose</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>body.lg — 1.125rem / lh 1.55 (lede)</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "1.125rem", lineHeight: 1.55, color: "#1F1B16", maxWidth: "65ch" }}>Most operators don't have a Notion problem. They have a workflow problem that Notion can solve — once the architecture is right.</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>body.md — 1rem / lh 1.55 (default)</p>
+    <p style={{ fontFamily: "'General Sans', system-ui, sans-serif", fontSize: "1rem", lineHeight: 1.55, color: "#1F1B16", maxWidth: "72ch" }}>La mayoría de los operadores no tienen un problema de Notion. Tienen un problema de flujo de trabajo que Notion puede resolver — una vez que la arquitectura sea correcta.</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>mono.md — 0.9375rem — code, technical labels</p>
+    <p style={{ fontFamily: "'Commit Mono', ui-monospace, monospace", fontSize: "0.9375rem", lineHeight: 1.5, color: "#1F1B16" }}>notion-architecture/v2.1.0</p>
+  </div>
+  <div>
+    <p style={{ fontFamily: "monospace", fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.04em", color: "#8A8073", marginBottom: "8px" }}>mono.sm — 0.8125rem — tags, badges, eyebrows</p>
+    <p style={{ fontFamily: "'Commit Mono', ui-monospace, monospace", fontSize: "0.8125rem", lineHeight: 1.45, letterSpacing: "0.04em", textTransform: "uppercase", color: "#8A8073" }}>Automation · Notion · Strategy</p>
+  </div>
+</div>
+
+## Rules
+
+- **Display & heading**: weight 500 (medium). Never 700+. Avoid bro-tech heaviness.
+- **Body**: weight 400. Use 500 for emphasis only. Italic is meaningful — for *terms of art*, ship names, meta-commentary. Never for punchlines.
+- **Mono**: weight 400. For labeling and technical artifacts only. Never decorative running text.
+- Letter-spacing: `-0.01em` on display sizes, `0` on body, `+0.04em` on uppercase mono labels.
+- Default text color is `color.ink.primary` (`#1F1B16`). Never set text to `#000`.

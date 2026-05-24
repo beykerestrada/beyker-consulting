@@ -1,0 +1,125 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="Foundations/Color" />
+
+# Color — Workshop Palette
+
+The palette is named **Workshop**: a working surface, real materials, evidence of thought.
+Every color is earned. Nothing is decorative.
+
+## Surfaces
+
+<ColorPalette>
+  <ColorItem
+    title="color.surface.canvas"
+    subtitle="Drafting paper — page background"
+    colors={{ Canvas: "#EBE7DC" }}
+  />
+  <ColorItem
+    title="color.surface.raised"
+    subtitle="Vellum — cards, panels"
+    colors={{ Raised: "#F4F1E8" }}
+  />
+  <ColorItem
+    title="color.surface.sunken"
+    subtitle="Linen — code blocks, inset areas"
+    colors={{ Sunken: "#DDD8C9" }}
+  />
+</ColorPalette>
+
+## Ink
+
+<ColorPalette>
+  <ColorItem
+    title="color.ink.primary"
+    subtitle="Soot — warm brown-black, never pure black"
+    colors={{ Primary: "#1F1B16" }}
+  />
+  <ColorItem
+    title="color.ink.secondary"
+    subtitle="Driftwood — metadata, supporting text"
+    colors={{ Secondary: "#5C5448" }}
+  />
+  <ColorItem
+    title="color.ink.muted"
+    subtitle="Stone — placeholders, captions"
+    colors={{ Muted: "#8A8073" }}
+  />
+</ColorPalette>
+
+## Borders
+
+<ColorPalette>
+  <ColorItem
+    title="color.border.default"
+    subtitle="Twine — hairlines, card edges"
+    colors={{ Default: "#C7C0AE" }}
+  />
+  <ColorItem
+    title="color.border.strong"
+    subtitle="Focused inputs, emphasis"
+    colors={{ Strong: "#9A8F78" }}
+  />
+</ColorPalette>
+
+## Signal
+
+The **single accent** in this system. Workshop green appears on the logo, primary buttons,
+active nav items, link underlines, and pullquote rules. If more than ~6 green elements
+are visible simultaneously on a page, something is wrong.
+
+<ColorPalette>
+  <ColorItem
+    title="color.signal.primary"
+    subtitle="Workshop green — primary action, links, brand mark"
+    colors={{ Primary: "#3A5A40" }}
+  />
+  <ColorItem
+    title="color.signal.primary.hover"
+    subtitle="Hover state"
+    colors={{ Hover: "#2F4A35" }}
+  />
+  <ColorItem
+    title="color.signal.primary.subtle"
+    subtitle="Tinted background for signal-themed surfaces"
+    colors={{ Subtle: "#E2E6D9" }}
+  />
+</ColorPalette>
+
+## Editorial & Status
+
+<ColorPalette>
+  <ColorItem
+    title="color.highlight.mark"
+    subtitle="Lichen — inline mark (<mark>), use sparingly"
+    colors={{ Mark: "#C8CC8A" }}
+  />
+  <ColorItem
+    title="color.status.warning"
+    subtitle="Earth-toned warning — not amber, not yellow"
+    colors={{ Warning: "#8B6B2E" }}
+  />
+  <ColorItem
+    title="color.status.danger"
+    subtitle="Earth-toned error — not red-red, not terracotta-bright"
+    colors={{ Danger: "#7A3B2E" }}
+  />
+</ColorPalette>
+
+## Gradient policy
+
+One gradient is permitted: `gradient.page.foot` — a vertical fade from canvas to sunken,
+used only at the bottom of full-page sections to suggest depth.
+
+```css
+background: var(--bk-gradient-page-foot);
+/* = linear-gradient(to bottom, #EBE7DC, #DDD8C9) */
+```
+
+No diagonal gradients. No multi-hue gradients.
+
+## Dark mode
+
+Token slots are reserved (see `tokens.json`) but values are `TODO` — dark mode is out of scope for v1.
+The dark palette will be tailored warm-neutral: think tea-stained paper inverted to a dim workshop.
+**Never violet-black.**

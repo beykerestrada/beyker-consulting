@@ -1,0 +1,36 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Motion" />
+
+# Motion
+
+Motion is functional, not theatrical. It confirms state changes, not performances.
+
+## Duration
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `motion.duration.fast` | 120ms | Hover color changes, quick state transitions |
+| `motion.duration.base` | 200ms | Default — most transitions |
+| `motion.duration.slow` | 320ms | Overlays, complex enter/exit |
+
+## Easing
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `motion.ease.standard` | `cubic-bezier(0.2, 0, 0, 1)` | Standard interactions |
+| `motion.ease.exit` | `cubic-bezier(0.4, 0, 1, 1)` | Elements leaving the screen |
+
+## Rules
+
+- **No bouncy springs.** No `spring()` or elastic easing.
+- **No `transform: scale(1.05)` on hover.** Hover states change color and border — not size.
+- Hover effects should take `motion.duration.fast` (120ms).
+- Overlays and modals use `motion.duration.slow` (320ms).
+- Always pair duration with `motion.ease.standard` for enter, `motion.ease.exit` for exit.
+
+## CSS usage
+
+```css
+transition: background-color var(--bk-motion-duration-fast) var(--bk-motion-ease-standard);
+```

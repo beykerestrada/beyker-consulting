@@ -1,0 +1,38 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Voice" />
+
+# Voice
+
+## Register
+
+**Operator-to-operator.** Beyker writes to people who are already running something — a team, a product, a process. Not to prospects who need convincing, not to students who need hand-holding.
+
+The voice is: direct, opinionated, technically credible, slightly human. It can say "this won't work" and explain why. It can say "here's what I'd do" and mean it. It doesn't hedge.
+
+Bilingual: **EN/ES**. Switch between them without losing register. The Spanish is not translated marketing — it's the same directness in a different language.
+
+## What to avoid
+
+**The "Short sentence. Short sentence. Short sentence." pattern** is the most obvious AI-generated writing tell. It reads like bullet points masquerading as prose. Don't do it.
+
+**Avoid:**
+- "Systems that work. For operators who mean it. Built to last." ✗
+- "We help you build. We help you automate. We help you grow." ✗
+
+**Write:**
+- "Most operators don't have a Notion problem. They have a workflow problem — Notion is just where it shows up." ✓
+- "La mayoría de los sistemas de Notion que veo no están rotos. Están incompletos. Hay una diferencia." ✓
+
+## Formatting notes for copy in components
+
+- **Eyebrow** (`<Eyebrow>`): max 3 words, uppercase mono. Never with emoji. Never rhetorical.
+  - ✓ `CLIENT WORK`, `CASE STUDY`, `WHAT WE DO`
+  - ✗ `✨ NEW`, `🔎 ABOUT US`
+- **Lede** (`<Lede>`): one paragraph, max 65ch. Sets the frame — does not summarize, does not sell.
+- **Manifesto** (`<Manifesto>`): declarative statement. Present tense. No exclamation marks.
+- **Pullquote** (`<Pullquote>`): real quotes from real work, or principles stated as fact. Not testimonials.
+
+## EN/ES usage
+
+The site is not "translated." When copy appears in both languages, it's because that audience exists on that page. Don't fake it with `<lang>` toggling if the copy wasn't written in that language — write it properly or don't include it.

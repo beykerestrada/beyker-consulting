@@ -1,0 +1,66 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Layout" />
+
+# Layout Principles
+
+## Document over dashboard
+
+The site reads like a working document, not an app UI. Left-aligned content, generous gutters.
+
+- **Prose max-width**: 72ch — for body copy and reading content (`var(--bk-layout-prose-max)`)
+- **Composition max-width**: 1120px — for page-level layouts (`var(--bk-layout-composition-max)`)
+- Default vertical rhythm between content blocks: 48px (`var(--bk-space-7)`)
+
+## Asymmetry is allowed
+
+A two-column block where the left is 5/12 and the right is 7/12 is preferred over 6/6.
+Avoid perfect symmetry by default. Document pages have natural asymmetry — let them.
+
+Use the `<Grid>` primitive with the `span` prop on `<GridItem>` to create intentional asymmetry:
+
+```tsx
+<Grid columns={12} gap="6">
+  <GridItem span={5}>
+    <Eyebrow>What we do</Eyebrow>
+    <Text variant="heading-lg">Notion architecture for operators.</Text>
+  </GridItem>
+  <GridItem span={7}>
+    <Lede>Most operators don't have a Notion problem...</Lede>
+  </GridItem>
+</Grid>
+```
+
+## Mono as wayfinding
+
+Section numbers, timestamps, tags, file paths, version labels → mono.
+This is the technical-authority signal. Use `<Eyebrow>`, `<Tag>`, `<Badge>`, and `<WorkLog>` for this.
+
+## Borders, not boxes
+
+Group related content with hairlines and whitespace, not nested boxed cards.
+A `<Specsheet>` reads better than a card grid. A `<Divider variant="labeled">` reads better
+than a section header with a background.
+
+## One accent, used rarely
+
+Workshop green (`color.signal.primary`) appears on:
+- Logo mark
+- Primary buttons
+- Active nav links
+- Link underlines
+- Pullquote left rule
+- WorkLog labels
+
+If a page has more than ~6 green elements visible at once, something is wrong.
+
+## Not in v1
+
+The following layout patterns are explicitly prohibited in this system:
+- Centered hero headline + three-column feature grid + pricing table
+- Testimonial carousel
+- Hero with video background
+- Animated stat counters
+- "How it works" three-column grids
+
+Use `<Specsheet>`, `<Manifesto>`, `<WorkLog>`, and custom `<Grid>` compositions instead.
